@@ -1,9 +1,9 @@
-//¶ş·ÖËÑË÷ 
+//äºŒåˆ†æœç´¢ 
 #include<stdio.h>
 int search(int,int*,int,int);
 int main()
 {
-	int a[71]={};							//´´½¨Ò»¸ö´Ó7µ½77µÄÊı×é 
+	int a[71]={};							//åˆ›å»ºä¸€ä¸ªä»7åˆ°77çš„æ•°ç»„ 
 	int i = 0;
 	int b = 7;
 	int num = 0;
@@ -13,24 +13,25 @@ int main()
 	} 
 	while(1)
 	{
-		printf("ÇëÊäÈëÒ»¸ö´Ó7µ½77µÄÊı£º"); 
-		scanf("%d",&num);					//ÊäÈëÒªËÑË÷µÄÊı
-		if(num>=7 && num<=77)				//¼ì²éÊäÈëÊÇ·ñºÏ·¨ 
+		printf("è¯·è¾“å…¥ä¸€ä¸ªä»7åˆ°77çš„æ•°ï¼š"); 
+		scanf("%d",&num);					//è¾“å…¥è¦æœç´¢çš„æ•°
+		if(num>=7 && num<=77)				//æ£€æŸ¥è¾“å…¥æ˜¯å¦åˆæ³• 
 		{
 			break;
 		}else
 		{
-			printf("ÄúÊäÈëµÄÊı¾İÓĞÎó\n");
+			printf("æ‚¨è¾“å…¥çš„æ•°æ®æœ‰è¯¯\n");
 		}
 	}
-	printf("%dÔÚÊı×éµÄµÚ%dÎ»",num,serch(num,a,0,70)); 
+	printf("%dåœ¨æ•°ç»„çš„ç¬¬%dä½",num,serch(num,a,0,70)); 
 	return 0;
 }
 
 int serch(int num,int a[],int beg,int end)
 {
+	if(num == 77)
+		return 71;
 	int mid = (beg+end)/2;
-	printf("beg = %d mid = %d end = %d a[mid] = %d\n",beg,mid,end,a[mid]); 
 	if(num == a[mid])
 	{
 		return mid;
@@ -42,4 +43,3 @@ int serch(int num,int a[],int beg,int end)
 		return serch(num,a,beg,mid);
 	}
 }
-//·¢ÏÖÒ»¸öbug£¬CÓïÑÔÄ¬ÈÏ³ı·¨ÏòÏÂÈ¡Õûµ¼ÖÂµ±ÊäÈëµÄÊıÔÚÊı×éÄ©Î²Ê±£¬ÎŞ·¨Êä³ö 
